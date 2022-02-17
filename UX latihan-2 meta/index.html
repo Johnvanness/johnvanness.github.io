@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus timetable - John</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&family=Source+Sans+Pro:wght@600;900&display=swap" rel="stylesheet">
+  
+   
+<style>
+
+    .main_container {
+        position: relative;
+        width: 852px;
+        height: 600px;
+        margin: 50px auto;
+    }
+    
+    .kiri, .kanan {
+        position: relative;
+        width: 45%;
+        margin-right: 5%;
+        height: 100%;
+        float: left;
+    }
+    
+    .kiri .atas {
+        position: relative;
+        width: 100%;
+        height: 35%;
+    }
+    
+    .kiri .bawah {
+        position: relative;
+        width: 100%;
+        height: 65%;
+        margin-bottom: 10px;
+    }
+    
+    .kanan .atas {
+        position: relative;
+        width: 100%;
+        height: 50%;
+    }
+    
+    .kanan .bawah {
+        position: relative;
+        width: 100%;
+        height: 50%;
+    }
+    
+    .kiri .atas h2 {
+           padding: 15px;
+           background-color: #666;
+           color: white;
+           margin-bottom: 5px;
+           margin-top: 0px
+        ;
+ 
+    }
+
+    .judul2 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;font-weight: bolder; font-size: 32px; 
+        line-height: 100%;
+        margin-top: 25px;
+        height: 40%;
+        color: rgb(49, 194, 49);
+    }
+
+    .judul3 {
+        font-family: 'Source Sans Pro', sans-serif;font-weight: normal;
+        padding-top: 10px;
+        font-size: 30px;
+        float: right;
+    }
+    
+    .judul4 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        height: normal;
+        margin-top: -5px; 
+        padding-left: 70%;
+        font-size: 120px;
+        float: right;
+    }
+    
+    .isi {
+        padding-left: 5%;
+        width: 95%;
+    }
+    
+    table.route_table {
+        border: 1px solid black;
+           border-collapse: collapse;
+           width: 100%;
+    }
+    
+    table.route_table th {
+        background-color: rgba(100,99,104,255); border: 1px solid rgb(182, 182, 182);
+        font-family: 'Source Sans Pro', sans-serif;font-size: 16px; font-weight: normal;
+        padding-left: 8px; padding-top: 3px; padding-bottom: 3px;
+        vertical-align: 0px;
+        height: 40px;
+        line-height: 110%;
+        text-align: left;
+        color: white;
+        
+    }
+    
+    table.route_table td {
+        background-color: white; border: 1px solid rgb(175, 172, 172);
+        color: black;
+        padding-left: 5px;
+        vertical-align: 0px;
+
+
+
+    }
+
+    
+    table.route_table td:nth-child(1) {
+        line-height: 140%;
+        font-family: 'Montserrat', sans-serif; font-weight: bold;
+        width: 75px;
+
+
+    }
+    
+    
+    table.route_table td:nth-child(2) {
+        font-family: 'Source Sans Pro', sans-serif; font-weight: lighter;
+        width: 230px;
+
+
+    }
+    
+    table.route_table td:nth-child(3) {
+        font-family: 'Montserrat', sans-serif; font-weight: bold;
+        width: 60px;
+
+
+    }
+    table.table2 {
+        border-collapse: collapse;
+        border: 1px solid white;
+        margin-top: 5px;
+        width: 80%;
+    }
+    
+
+    table.table2 td {
+        border: 1px solid white;
+        
+    }
+    
+    table.table2 td:nth-child(1) {
+        width: 20%;
+        vertical-align: 0px;
+        padding-top: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder; font-size: 32px;
+    }
+    
+    table.table2 td:nth-child(2) {
+        width: 60%; 
+        padding-left:5%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: normal; font-size: 16px; 
+        font-weight: bolder;
+        padding-top: 10px;
+    }
+
+    
+    table.table2 td:nth-child(3) {
+        padding-left: 30%;
+        width: 25%;
+        vertical-align: 0px;
+        
+    }
+
+    
+    hr.kotak2 {
+        border: 1px solid rgb(49, 194, 49);
+        width: 80%; height: 2px;
+        margin-left: 0px; margin-top: 10px;
+        background: rgb(49, 194, 49);
+    }
+    
+    .info {
+        font-family: 'Source Sans Pro', sans-serif; font-size: 15px; font-weight: 200;
+        margin: auto;
+        line-height: 120%;
+
+
+    }
+    
+    p {
+        font-family: 'Source Sans Pro', sans-serif; font-size: 15px;
+        margin: auto;
+
+        
+    }
+    
+    ul {
+        font-family: 'Source Sans Pro', sans-serif; font-size: 15px;
+        margin: auto;
+        color: grey;
+
+
+    }
+    
+    li {
+        font-family: 'Source Sans Pro', sans-serif;
+        margin-left: -15px;
+        font-size: 15px;
+
+
+    }
+    
+    
+    
+    .kotakkanan {
+        font-family: 'Oswald', sans-serif; color: rgba(34,30,31,255);font-weight: bold; font-size: 16px;
+        height: 70px; width: 160px;
+        line-height: 140%;
+        padding: 10px; padding-right: 30px;
+        margin: 0px;
+        background-color: rgb(231, 195, 220);
+        border-radius: 10px;
+        float: right;
+    
+    }
+    
+    .Route {
+        font-family: 'Source Sans Pro', sans-serif;
+        margin-top: -10px;
+        font-size: 24px;
+        font-weight: bolder;
+    }
+    
+    hr.hr2 {
+        margin-top: 5px; margin-bottom: 0px;
+        height: 1px; width: 100%;
+        border: 1px solid rgb(41, 78, 107);
+        background: rgb(52, 98, 136);
+        float: right;
+    }
+    
+    
+
+    
+    @media (max-width: 600px) {
+        .main_container {
+            width: 90%;
+        }
+    
+        .kiri, .kanan {
+            width: 100%;
+            margin: 0px;
+            margin-bottom: 50px;
+        }
+    }
+</style>
+</head>
+<body>
+                 <div class="main_container">
+                <div class="kiri">
+                <div class="atas">
+                <div class="judul1"><h2>Stand Departure Information</h2></div>
+                <div class="isi">
+                    <table class="route_table">
+                        <thead>
+                            <tr>
+                                <th style="width:20%;border-Right-color: white;">Route No.</th>
+                                <th style="border-right-color: white;">Location</th>
+                                <th style="width:20%;">Stand</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>81, 82, 83, 84, 85</td>
+                                <td>Perth Busport</td>
+                                <td>9 - 12</td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                    <div class="judul2">Transperth Information</div>
+                    <hr class="kotak2">
+                    <div class="bawah">
+                            <div class="info">
+                             <p style="color: rgb(49, 194, 49);"
+                                >Call us</p>
+                                <p style="color: rgb(49, 194, 49);margin-left: 10px;"
+                                >InfoLine 
+                                    <span style="color: grey;"> on 13 62 23</span>
+                                    <br><span style="color: grey;">(TIS 13 14 50)</span></p>
+                                <p style="color: rgb(49, 194, 49);margin-left: 10px;margin-top: 3px;"
+                                >Hearing or speech impaired?</p>
+                                <p style="color: grey;margin-left: 10px;font-size: 14px;margin-top: 3px;"
+                                >Call via NRS on 133 677</p>
+                                <p style="color: rgb(49, 194, 49);margin-top: 5px;"
+                                >Visit an InfoCentre at:</p>
+                                <ul>
+                                    <li>Elizabeth Quay Bus Station</li>
+                                    <li>Perth Busport</li>
+                                    <li>Perth Station</li>
+                                    <li>Perth Underground Station</li>
+                                </ul>
+                                <p style="color: rgb(49, 194, 49);margin-top: 5px;"
+                                >Got an iPhone or Android device?</p>
+                                <p style="color: grey;font-size: 14px;"
+                                >Download our free app now to help you plan your journey.</p>
+                                <p style="color: rgb(49, 194, 49);margin-top: 5px;">
+                                    Visit us online</p>
+                                <p style="color: grey;font-size: 16px;"
+                                >transperth.wa.gov.au</p>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="kanan">
+            <div class="atas">
+                <div class="judul3">Bus Timetable</div>
+                <div class="judul4"><b>42</b></div>
+                <div class="kotakkanan">For full service details for these routes, refer to Timetable 43.</div>
+            </div>
+            <div class="bawah">
+                <div class="Route">Routes</div>
+                    <hr class="hr2">
+                        <table class="table2">
+                            <tr>
+                                <td>81</td>
+                                <td>Perth - Wembley via Cambridge St</td>
+                                <td style="width: 25;"><img src="duduk.png"  height="25"style="display:block; margin-left: auto; margin-right:auto; margin-top: 20%"/></td>
+                            </tr>
+                            <tr>
+                                <td>82</td>
+                                <td>Perth - Wembley via Cambridge St</td>
+                                <td style="width: 25;"><img src="duduk.png"  height="25"style="display:block; margin-left: auto; 
+                                margin-right:auto; margin-top: 20%"/>
+                                </div></td>
+                            </tr>
+                            <tr>
+                                <td>83</td>
+                                <td>Perth - Wembley via Cambridge St</td>
+                                <td style="width: 25;"><img src="duduk.png"  height="25"style="display:block; margin-left: auto; 
+                                margin-right:auto; margin-top: 20%"/></td>
+                            </tr>
+                            <tr>
+                                <td>84</td>
+                                <td>Perth - Wembley via Cambridge St</td>
+                                <td style="width: 25;"><img src="duduk.png" height="25"style="display:block; margin-left: auto; 
+                                margin-right:auto; margin-top: 20%"/></td>
+                            </tr>
+                            <tr>
+                                <td>85</td>
+                                <td>Perth - Wembley via Cambridge St</td>
+                                <td style="width: 25;"><img src="duduk.png"  height="25"style="display:block; margin-left: auto; 
+                                margin-right:auto; margin-top: 20%"/></td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>        
+</body>
+</html>
